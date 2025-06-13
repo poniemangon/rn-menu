@@ -2,14 +2,14 @@ $(document).ready(function() {
     // Mobile menu toggle
     $('.fa-bars').click(function() {
         $('.header-section ul.menu').slideToggle(300);
-        $(this).removeClass('active');
-        $('.fa-xmark').addClass('active');
+        $('.fa-bars').hide();
+        $('.fa-xmark').show();
     });
 
     $('.fa-xmark').click(function() {
         $('.header-section ul.menu').slideToggle(300);
-        $(this).removeClass('active');
-        $('.fa-bars').addClass('active');
+        $('.fa-xmark').hide();
+        $('.fa-bars').show();
     });
 
     $('.menu-item-text').click(function(e) {
