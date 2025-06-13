@@ -1,0 +1,237 @@
+body {margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif;}
+
+.container {max-width: 1200px; margin: auto; width: 80%;}
+
+
+
+.header-section .container {display: flex; justify-content: space-between; align-items: center; padding: 20px 0;}
+
+.header-section .logo {max-width: 155px;}
+
+.header-section li {font-size: 16px; font-weight: 500; color: #000; text-decoration: none; list-style: none;}
+
+.header-section .menu {display: flex; gap: 20px;}
+
+.header-section .menu ul {display: none;}
+
+.header-section .menu li.active ul {display: block;}
+
+.header-section.scrolled {background-color: #fff; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);}
+
+.menu li {
+    position: relative;
+    display: inline-block;
+    color: black;
+    
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu li ul {
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.menu li.menu-item:hover ul.dropdown {
+    display: block;
+}
+
+.menu li ul li {
+    display: block;
+    width: 200px;
+}
+
+.menu li ul li a {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+.menu li ul li a:hover {
+    background-color: #f4f4f4;
+}
+
+/* Submenu styles */
+.has-submenu {
+    position: relative;
+}
+
+.submenu {display: none;}
+
+.has-submenu .submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.has-submenu:hover > .submenu {
+    display: block;
+}
+
+.has-submenu .submenu li {
+    width: 200px;
+}
+
+.has-submenu .submenu li a {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+.has-submenu .submenu li a:hover {
+    background-color: #f4f4f4;
+}
+
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box .search-input {
+    display: none;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-box .search-input:focus {
+    outline: none;
+}   
+
+.search-box .search-input.active {
+    display: block;
+}
+
+.toggle-search {
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+}
+
+.toggle-search:hover {
+    color: #007cbf;
+}
+
+.btn {
+    background: #007cbf;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 30px;
+    margin-right: 20px;
+    text-decoration: none;
+
+}
+
+.btn:hover {
+    background-color: black;
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #007cbf;
+}
+
+.menu-item.mobile {display: none;}
+
+@media (max-width: 1200px) {
+    .header-section .container .btn {display: none;}
+    .search-box.desktop {display: none;}  
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .header-section ul.menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: white;
+        z-index: 1000;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow-y: auto;
+    }
+
+    .header-section ul.menu.active {
+        display: block;
+    }
+
+    .menu-item.mobile {display: block;}
+
+    .menu-item {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .menu-item a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .menu-item .dropdown {
+        position: static;
+        box-shadow: none;
+        display: none;
+        padding-left: 20px;
+    }
+
+    .menu-item .dropdown li {
+        width: 100%;
+    }
+
+    .menu-item .has-submenu .submenu {
+        position: static;
+        box-shadow: none;
+        padding-left: 20px;
+    }
+
+    .search-box.mobile {
+        display: block;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .search-box.mobile .search-input {
+        display: block;
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-box.mobile .toggle-search {
+        display: none;
+    }
+}
+
+
