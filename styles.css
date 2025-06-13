@@ -205,8 +205,10 @@ body {margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", san
 
     .header-section .menu {display: flex; flex-direction: column; gap: 20px;}
 
+
     .header-section ul.menu {
         display: none;
+        align-items: center;
         position: fixed;
         top: 0;
         left: 0;
@@ -218,10 +220,11 @@ body {margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", san
         box-sizing: border-box;
         overflow-y: auto;
     }
-
     .header-section ul.menu.active {
-        display: block;
+        display: flex;
     }
+
+
 
     .menu-item.mobile {display: block;}
 

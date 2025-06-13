@@ -1,13 +1,15 @@
 $(document).ready(function() {
     // Mobile menu toggle
     $('.fa-bars').click(function() {
-        $('.header-section ul.menu').slideToggle(300);
+       
+        $('.header-section ul.menu').addClass('active');
         $('.fa-bars').hide();
         $('.fa-xmark').show();
     });
 
     $('.fa-xmark').click(function() {
-        $('.header-section ul.menu').slideToggle(300);
+       
+        $('.header-section ul.menu').removeClass('active');
         $('.fa-xmark').hide();
         $('.fa-bars').show();
     });
